@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOTSTRAP TASK 6</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center align-items-center bg-light" style="margin-top: 10em; height: 30em; width: 50em">
+    <div class="mx-auto w-50 mt-5">
+        <form class="needs-validation" novalidate="">
+            <div class="mb-3 has-validation">
+                <label for="inputName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputName" required="">
+                <div class="invalid-feedback">
+                    Name is required.
+                </div>
+            </div>
+            <div class="mb-3 has-validation">
+                <label for="inputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail1" required="">
+                <div class="invalid-feedback">
+                    Email is required.
+                </div>
+            </div>
+            <div class="mb-3 has-validation">
+                <label for="inputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword1" required="">
+                <div class="invalid-feedback">
+                    Password is required.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="inputHobbies" class="form-label">Hobbies</label>
+                <select class="form-select" aria-label="Default select example" id="inputHobbies" required="">
+                    <option selected="" disabled="" value="">--select--</option>
+                    <option value="1">Reading</option>
+                    <option value="2">Writing</option>
+                    <option value="3">Coding</option>
+                </select>
+             
+            <div>
+                <button type="submit" class="btn btn-danger w-100">Submit</button>
+            </div>
+        
+    </div></form>
+
+
+    <script>
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+
+
+</div></div></body>
+</html>
